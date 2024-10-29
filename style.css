@@ -1,0 +1,206 @@
+/* Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 10px;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #3366cc;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Form Section */
+.form-section {
+    background: #f0f7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.form-section:hover {
+    transform: scale(1.02);
+}
+
+.form-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #3366cc;
+}
+
+.form-section input, .form-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.form-section input:focus, .form-section select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(51, 102, 204, 0.5);
+}
+
+button {
+    background-color: #3366cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #254c8b;
+}
+
+/* Table */
+.delivery-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.delivery-section th, .delivery-section td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.delivery-section th {
+    background-color: #3366cc;
+    color: white;
+}
+
+.delivery-section tr:hover {
+    background-color: #f1faff;
+}
+
+/* Report Section */
+.report-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f4ff;
+    border-radius: 8px;
+}
+
+.report-section h2 {
+    color: #3366cc;
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.report-section p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #444;
+    margin-top: 5px;
+}
+
+.report-section button {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+}
+
+/* Dynamic Feedback */
+.form-section input, .form-section select, button {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-section input:hover, .form-section select:hover, button:hover {
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Custom Animations */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container, .form-section, .delivery-section, .report-section {
+    animation: slideIn 0.6s ease-in-out;
+}
+/* Global Styles (Desktop) */
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .report-section p {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .form-section label,
+    .form-section input,
+    .form-section select {
+        font-size: 0.9em;
+    }
+
+    .report-section p {
+        font-size: 0.9em;
+    }
+}
